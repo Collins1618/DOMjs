@@ -6,6 +6,10 @@
 
 
 //select last p tag using css class selector
-const para = document.querySelector('div.error');
-console.log(para);
+// const para = document.querySelector('div.error');
+// console.log(para);
+
+//selecting all the elements of a given type using querySelectorAll
+const paras = document.querySelectorAll('p');
+console.log(paras[0]);
 
