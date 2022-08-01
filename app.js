@@ -14,9 +14,14 @@ const para = document.querySelector('p'); //first paragraph on the page
 const paras = document.querySelectorAll('p'); //grab all p tags
 
 //cycle through a node list using foreach
-paras.forEach(para => {
-    console.log(para.innerText);
-    para.innerText += " new text";
-})
+// paras.forEach(para => {
+//     console.log(para.innerText);
+//     para.innerText += " new text";
+// })
 
+//change the html on a page
+const content = document.querySelector('.content');
 
+// console.log(content.innerHTML);
+
+content.innerHTML += '<h2>THIS IS A NEW H2</h2>';// += APPEND, = OVERWRITE
