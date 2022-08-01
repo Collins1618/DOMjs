@@ -24,4 +24,10 @@ const content = document.querySelector('.content');
 
 // console.log(content.innerHTML);
 
-content.innerHTML += '<h2>THIS IS A NEW H2</h2>';// += APPEND, = OVERWRITE
+// content.innerHTML += '<h2>THIS IS A NEW H2</h2>';// += APPEND, = OVERWRITE
+
+const people = ['mario', 'luigi', 'yoshi'];
+people.forEach(person => {
+    let ul = document.querySelector('ul');
+    ul.innerHTML += `<li>${person}</li>`;
+});
