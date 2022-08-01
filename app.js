@@ -1,20 +1,13 @@
-// to select items use the css selectors as strins inside the query
-//selector method
-//select the first paragraph in the document using paragraph selector
-//this selects the first p tag in the document
-// const para = document.querySelector("p");
+//Adding and changing page content
+const para = document.querySelector('p'); //first paragraph on the page
 
+// console.log(para.innerText)
 
-//select last p tag using css class selector
-// const para = document.querySelector('div.error');
-// console.log(para);
+//update inner text on the first paragraph\
+//override the older text completely
+para.innerText = "ninjas are awesome!"; 
 
-//selecting all the elements of a given type using querySelectorAll
-const paras = document.querySelectorAll('p');
-console.log(paras[2]);
+//append to the end of the paragraph
+// para.innerText += " ninjas are awesome!"
 
-//you can also use forEach on a Node list
-paras.forEach(para => {
-    console.log(para);
-});
 
