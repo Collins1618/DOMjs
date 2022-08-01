@@ -11,5 +11,10 @@
 
 //selecting all the elements of a given type using querySelectorAll
 const paras = document.querySelectorAll('p');
-console.log(paras[0]);
+console.log(paras[2]);
+
+//you can also use forEach on a Node list
+paras.forEach(para => {
+    console.log(para);
+});
 
