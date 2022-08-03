@@ -10,4 +10,8 @@ console.log(title.parentElement);
 console.log(title.parentElement.parentElement); //we can chain
 //these thigns together
 
+console.log(title.nextElementSibling);
+console.log(title.previousElementSibling);
 
+//chaining
+console.log(title.nextElementSibling.parentElement.children);
