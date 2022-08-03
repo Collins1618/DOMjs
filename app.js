@@ -11,3 +11,9 @@ paras.forEach(para => {
         para.classList.add('success');
     }
 })
+
+//toggling classes
+const title = document.querySelector('.title');
+
+title.classList.toggle('test');//add test class
+title.classList.toggle('test');//remove test class
