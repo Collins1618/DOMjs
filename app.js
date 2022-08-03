@@ -1,17 +1,6 @@
-const article = document.querySelector('article');
-// console.log(article.children);
+const button = document.querySelector('button');
 
-// Array.from(article.children).forEach(child => {
-//     child.classList.add('article-element');
-// })
-
-const title = document.querySelector('h2');
-console.log(title.parentElement);
-console.log(title.parentElement.parentElement); //we can chain
-//these thigns together
-
-console.log(title.nextElementSibling);
-console.log(title.previousElementSibling);
-
-//chaining
-console.log(title.nextElementSibling.parentElement.children);
+//add an event listener using the addEventListener methods
+button.addEventListener('click', () => {
+    console.log("you clicked me");
+});
