@@ -1,26 +1,12 @@
-//changing attributes
-// const link  = document.querySelector('a');
+const content = document.querySelector('p');
 
-// console.log(link.getAttribute('href'))
+//log out the list of classes belonging to the const content
+console.log(content.classList);
 
-// link.setAttribute('href', 'https://wwww.thenetninja.co.uk');
-// link.innerText = 'The net ninja website';
+//adding classes
+content.classList.add('error');
 
-// const msg = document.querySelector('p');
-// console.log(msg.getAttribute('class'));
-// msg.setAttribute('class', 'success');
+//removing a class
+content.classList.remove('error');
 
-// msg.setAttribute('style', 'color:green');
-
-const title = document.querySelector('h1');
-
-console.log(title.style);
-console.log(title.style.color)
-
-//adding styles to Css
-title.style.margin = '50px';
-title.style.color = 'crimson';
-title.style.fontSize = '60px';
-
-//deleting a style
-title.style.margin ='';
+content.classList.add('success');
