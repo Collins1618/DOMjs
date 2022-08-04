@@ -1,53 +1,17 @@
-// const button = document.querySelector('button');
-
-// //add an event listener using the addEventListener methods
-// button.addEventListener('click', () => {
-//     console.log("you clicked me");
-// });
-
-const ul = document.querySelector('ul');
-// ul.remove();
-
-const button = document.querySelector('button');
-button.addEventListener('click', () => {
-    //first way to add an element upon clicking
-    // ul.innerHTML += '<li>something new</li>'
-
-    const li = document.createElement('li') //created and sitting aroung
-    //we have a reference to it
-
-    li.textContent = 'something new to do'
-    // ul.append(li); //add to the bottom of the parent
-    ul.prepend(li);
+//handle a copy event on the page
+const copy = document.querySelector('.copy-me');
+copy.addEventListener('copy', () => {
+    console.log('Oi! my content is copyright');
 })
 
-// const items = document.querySelectorAll('li'); //nodelist of li tags
-
-// items.forEach(item => {
-//     item.addEventListener('click', e => {
-//         // console.log('item clicked');
-//         // console.log(e);
-//         // console.log(e.target);
-//         // console.log(item); // we can access the element using the item
-//         //becaus we have access to items when we cycling through itmes
-//         // e.target.style.textDecoration = 'line-through';
-//         console.log('event in LI')
-//         e.stopPropagation(); //stops event bubbling up to the parent
-//         e.target.remove(); //remove clicked element from webpage
-//     });
-// })
-
-ul.addEventListener('click', e => {
-    // console.log('event in UL');
-
-    //event delegation
-    //inside this ul, you need to find out what element was clicked 
-    //using the e.target from the DOM
-    console.log(e.target.nodeName);
-    if(e.target.nodeName === 'LI'){
-        e.target.remove();
-    }
-
-
-
+//handle a mouse move event on the page
+const box = document.querySelector('.box');
+box.addEventListener('mousemove', e => {
+    // console.log(e);
+    //console.log(e.offsetX, e.offsetY);
+    box.textContent = `X pos = ${e.offsetX} Y pos = ${e.offsetY}`;
 })
+
+document.addEventListener('wheel', e => {
+    console.log(e.pageX, e.pageY);
+});
