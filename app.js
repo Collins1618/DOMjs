@@ -8,6 +8,19 @@
 const ul = document.querySelector('ul');
 // ul.remove();
 
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    //first way to add an element upon clicking
+    // ul.innerHTML += '<li>something new</li>'
+
+    const li = document.createElement('li') //created and sitting aroung
+    //we have a reference to it
+
+    li.textContent = 'something new to do'
+    // ul.append(li); //add to the bottom of the parent
+    ul.prepend(li);
+})
+
 const items = document.querySelectorAll('li'); //nodelist of li tags
 
 items.forEach(item => {
