@@ -21,22 +21,33 @@ button.addEventListener('click', () => {
     ul.prepend(li);
 })
 
-const items = document.querySelectorAll('li'); //nodelist of li tags
+// const items = document.querySelectorAll('li'); //nodelist of li tags
 
-items.forEach(item => {
-    item.addEventListener('click', e => {
-        // console.log('item clicked');
-        // console.log(e);
-        // console.log(e.target);
-        // console.log(item); // we can access the element using the item
-        //becaus we have access to items when we cycling through itmes
-        // e.target.style.textDecoration = 'line-through';
-        console.log('event in LI')
-        e.stopPropagation(); //stops event bubbling up to the parent
-        e.target.remove(); //remove clicked element from webpage
-    });
-})
+// items.forEach(item => {
+//     item.addEventListener('click', e => {
+//         // console.log('item clicked');
+//         // console.log(e);
+//         // console.log(e.target);
+//         // console.log(item); // we can access the element using the item
+//         //becaus we have access to items when we cycling through itmes
+//         // e.target.style.textDecoration = 'line-through';
+//         console.log('event in LI')
+//         e.stopPropagation(); //stops event bubbling up to the parent
+//         e.target.remove(); //remove clicked element from webpage
+//     });
+// })
 
 ul.addEventListener('click', e => {
-    console.log('event in UL');
+    // console.log('event in UL');
+
+    //event delegation
+    //inside this ul, you need to find out what element was clicked 
+    //using the e.target from the DOM
+    console.log(e.target.nodeName);
+    if(e.target.nodeName === 'LI'){
+        e.target.remove();
+    }
+
+
+
 })
