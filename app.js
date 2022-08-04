@@ -31,6 +31,12 @@ items.forEach(item => {
         // console.log(item); // we can access the element using the item
         //becaus we have access to items when we cycling through itmes
         // e.target.style.textDecoration = 'line-through';
+        console.log('event in LI')
+        e.stopPropagation(); //stops event bubbling up to the parent
         e.target.remove(); //remove clicked element from webpage
     });
+})
+
+ul.addEventListener('click', e => {
+    console.log('event in UL');
 })
